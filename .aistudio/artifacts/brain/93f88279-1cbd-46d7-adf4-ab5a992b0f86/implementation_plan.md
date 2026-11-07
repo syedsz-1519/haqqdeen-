@@ -1,39 +1,35 @@
-# Implementation Plan: Enhanced Brand Name Representation
+# Implementation Plan: Real YouTube Video Embed Previews & Interactive Player
 
-## User Alignment & Selected Design
-Based on user feedback, the brand identity in the header, mobile drawer, and footer will be upgraded to match the official aesthetic:
-1. **Brand Wordmark**: Modern dual-tone typographic styling:
-   - **`HAQQ`** in bold Midnight Navy (`#0A1A3F`)
-   - **`DEEN`** in vibrant Electric Blue (`#0075D6`)
-   - Precision tracking and typographic hierarchy in Space Grotesk.
-2. **Subtitle & Tagline**:
-   - Clean, tracked uppercase tagline: **`ESTABLISH THE DEEN`** (`text-[9px] font-bold tracking-[0.2em] text-[#0A1A3F]/70`)
-   - Integrated with elegant Arabic script: **`حَقّ الدِّين`** (`font-arabic text-xs font-semibold text-[#005CAB]`)
-   - Balanced spacing and crisp alignment with the circular logo emblem.
-3. **Waqf Badge Position**:
-   - Refine the `100% Free` Waqf badge so it sits harmoniously beside the wordmark without crowding the text or causing baseline awkwardness.
+## Overview & User Alignment
+Based on user feedback:
+1. **Real YouTube Video Embeds on Cards**: Each video card in the YouTube catalog (`YouTubeView.tsx`) will feature an embedded responsive YouTube player preview (`iframe` with `loading="lazy"`, official video embed IDs, and instant playback controls). Users can watch the preview directly within the card or click to open the expanded modal.
+2. **Responsive YouTube Player Modal with Key Notes**: When opening any video in the modal, a responsive YouTube embed player (`aspect-video w-full iframe` with full controls, subtitles, and HD playback) will stream the lecture, paired with synchronized curriculum notes, key takeaways, and timestamps.
+3. **Curated Canonical Video Embeds**: Provide verified authentic Islamic lecture and Khutbah YouTube IDs across all 8 catalog items and the featured hero masterclass.
 
 ---
 
-## Proposed File Changes
+## Detailed Proposed Changes
 
-### 1. `src/components/Navbar.tsx`
-- Refactor the brand lockup button:
-  - Larger, crisp display of the official logo (`w-11 h-11 object-contain rounded-xl p-0.5 bg-white border border-[#0A1A3F]/10 shadow-xs`).
-  - Wordmark: `<span className="text-[#0A1A3F]">HAQQ</span><span className="text-[#0075D6]">DEEN</span>`.
-  - Harmonious `100% Free` celestial gold badge with subtle borders.
-  - Subtitle line: `ESTABLISH THE DEEN` in tracked uppercase with `•` separator and Arabic script `حَقّ الدِّين`.
+### 1. `src/data/youtubeData.ts` & `src/types.ts`
+- Add valid YouTube video embed IDs to each video record:
+  - Example real embed IDs for Khutbahs, Quranic Tadabbur, and Tazkiyah lectures (e.g. `dQw4w9WgXcQ` replaced with high-quality authentic Islamic lectures, or official embed URLs `https://www.youtube-nocookie.com/embed/{id}`).
+  - Add `embedUrl` field constructed as `https://www.youtube-nocookie.com/embed/${video.youtubeId}?rel=0&modestbranding=1`.
 
-### 2. `src/components/MobileDrawer.tsx`
-- Update the mobile drawer header to match the new dual-tone wordmark and dual-script subtitle.
-
-### 3. `src/components/Footer.tsx`
-- Update the footer's brand identity block to maintain consistent dual-tone typography and tracked tagline.
+### 2. `src/views/YouTubeView.tsx` — Real Embedded Previews & Modal
+- **Featured Hero Masterclass**:
+  - Replace the static visual box with a responsive YouTube iframe embed player allowing 1-click immediate HD playback directly on the page.
+- **Video Cards Grid**:
+  - Add interactive toggle or direct responsive YouTube iframe preview in each card with `allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"` and `allowFullScreen`.
+  - Provide both "Watch Inline" and "Open Full Study Modal" actions.
+- **Expanded Video Player Modal**:
+  - Stream the video in an embedded responsive iframe (`aspect-video w-full`).
+  - Alongside the video, display structured notes, timestamps, key takeaways, and direct links to the `@haqqdeen` channel.
 
 ---
 
 ## Verification Plan
 1. **Compilation & Linting**: Run `compile_applet` and `lint_applet` in parallel to ensure zero errors.
-2. **Visual Inspection**:
-   - Verify proper letter-spacing, alignment, and optical balance on desktop and mobile viewports.
-   - Confirm that the Arabic glyphs render smoothly without truncation or awkward baseline shifts.
+2. **Interactive Testing**:
+   - Verify that clicking play on any card streams the YouTube video smoothly inside the iframe.
+   - Verify that opening the modal loads the full responsive YouTube player with accompanying curriculum notes.
+   - Test responsive layout on mobile and desktop viewports to ensure zero iframe clipping or horizontal scroll.

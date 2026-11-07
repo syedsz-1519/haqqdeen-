@@ -98,3 +98,21 @@ export interface CertificateRecord {
   completionDate: string;
   certificateCode: string;
 }
+
+export type VideoCategory = 'all' | 'khutbah' | 'aqeedah' | 'tazkiyah' | 'productivity' | 'youth-qa' | 'shorts';
+
+export interface YouTubeVideo {
+  id: string;
+  youtubeId: string;
+  title: string;
+  speaker: string;
+  category: VideoCategory;
+  categoryLabel: string;
+  duration: string;
+  views: string;
+  uploadedDate: string;
+  description: string;
+  keyPoints: string[];
+  youtubeUrl: string;
+  featured?: boolean;
+}

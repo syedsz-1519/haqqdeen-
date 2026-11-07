@@ -428,14 +428,91 @@ The Prophet Muhammad ﷺ treated young companions like Usama ibn Zayd, Anas ibn 
   }
 ];
 
-export const HADITH_OF_THE_DAY: HadithItem = {
-  id: 'hadith-guide-goodness',
-  arabic: '« مَنْ دَلَّ عَلَى خَيْرٍ فَلَهُ مِثْلُ أَجْرِ فَاعِلِهِ »',
-  translation: '"Whoever guides someone to goodness will have a reward like the one who did it."',
-  narrator: 'Abu Mas’ud Al-Ansari (RA)',
-  source: 'Sahih Muslim 1893 • Kitab al-Imarah',
-  actionReflection: 'Establishing the Deen starts with amplifying righteousness. You do not need to be a grand scholar to attain massive scales of hasanat; simply sharing authentic knowledge, encouraging a friend to pray on time, or mentoring a youth doubles your own spiritual ledger.',
-  category: 'Daily Sunnah & Action'
+export const AUTHENTIC_HADITHS_COLLECTION: HadithItem[] = [
+  {
+    id: 'hadith-guide-goodness',
+    arabic: '« مَنْ دَلَّ عَلَى خَيْرٍ فَلَهُ مِثْلُ أَجْرِ فَاعِلِهِ »',
+    translation: '"Whoever guides someone to goodness will have a reward like the one who did it."',
+    narrator: 'Abu Mas’ud Al-Ansari (RA)',
+    source: 'Sahih Muslim 1893 • Kitab al-Imarah',
+    actionReflection: 'Establishing the Deen starts with amplifying righteousness. You do not need to be a grand scholar to attain massive scales of hasanat; simply sharing authentic knowledge, encouraging a friend to pray on time, or mentoring a youth doubles your own spiritual ledger.',
+    category: 'Revival & Da’wah'
+  },
+  {
+    id: 'hadith-intentions',
+    arabic: '« إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى »',
+    translation: '"Actions are judged only by intentions, and every person will get the reward only according to what they intended."',
+    narrator: 'Umar ibn Al-Khattab (RA)',
+    source: 'Sahih al-Bukhari 1 & Sahih Muslim 1907',
+    actionReflection: 'Before typing an email, opening your code editor, or entering a meeting, pause for three seconds to dedicate your work solely as an act of worship (Ihsan) for Allah.',
+    category: 'Sincerity & Ikhlas'
+  },
+  {
+    id: 'hadith-itqan',
+    arabic: '« إِنَّ اللَّهَ يُحِبُّ إِذَا عَمِلَ أَحَدُكُمْ عَمَلًا أَنْ يُتْقِنَهُ »',
+    translation: '"Verily, Allah loves that when one of you undertakes any work, they execute it with mastery and excellence (Itqan)."',
+    narrator: 'Aisha (RA)',
+    source: 'Shu’ab al-Iman (Al-Bayhaqi 4929)',
+    actionReflection: 'Refuse sloppy work or sluggish execution. When a believer writes software, crafts a proposal, or prepares a lecture, it should reflect divine excellence.',
+    category: 'Workplace & Craftsmanship'
+  },
+  {
+    id: 'hadith-beneficial-people',
+    arabic: '« أَحَبُّ النَّاسِ إِلَى اللَّهِ أَنْفَعُهُمْ لِلنَّاسِ »',
+    translation: '"The most beloved of people to Allah are those who bring the greatest benefit to mankind."',
+    narrator: 'Abdullah ibn Umar (RA)',
+    source: 'Al-Mu’jam al-Awsat (At-Tabarani 6026)',
+    actionReflection: 'Measure your worldly career not by salary tier alone, but by how many human beings are relieved, educated, fed, and spiritually elevated through your skills.',
+    category: 'Community & Service'
+  },
+  {
+    id: 'hadith-gentleness',
+    arabic: '« إِنَّ الرِّفْقَ لَا يَكُونُ فِي شَيْءٍ إِلَّا زَانَهُ، وَلَا يُنْزَعُ مِنْ شَيْءٍ إِلَّا شَانَهُ »',
+    translation: '"Gentleness is not present in anything except that it beautifies it, and it is not removed from anything except that it ruins it."',
+    narrator: 'Aisha (RA)',
+    source: 'Sahih Muslim 2594',
+    actionReflection: 'When correcting a peer, disagreeing online, or resolving a domestic dispute, choose calm restraint over harsh pride. Gentleness disarms anger.',
+    category: 'Character & Speech'
+  },
+  {
+    id: 'hadith-morning-barakah',
+    arabic: '« اللَّهُمَّ بَارِكْ لِأُمَّتِي فِي بُكُورِهَا »',
+    translation: '"O Allah, bless my Ummah in their early mornings."',
+    narrator: 'Sakhr al-Ghamidi (RA)',
+    source: 'Sunan Abi Dawud 2606 & Jami’ at-Tirmidhi 1212',
+    actionReflection: 'Reclaim the golden window after Fajr. The mind is pristine, distractions are silent, and the Prophet’s supplication is actively descending upon your effort.',
+    category: 'Barakah & Time Mastery'
+  },
+  {
+    id: 'hadith-smile-charity',
+    arabic: '« تَبَسُّمُكَ فِي وَجْهِ أَخِيكَ لَكَ صَدَقَةٌ »',
+    translation: '"Your smiling in the face of your brother is charity for you."',
+    narrator: 'Abu Dharr (RA)',
+    source: 'Jami’ at-Tirmidhi 1956',
+    actionReflection: 'A sincere smile breaks down loneliness and radiates warmth. Bestow warmth unconditionally upon your colleagues, family, and strangers today.',
+    category: 'Daily Sunnah & Kindness'
+  }
+];
+
+export const HADITH_OF_THE_DAY: HadithItem = AUTHENTIC_HADITHS_COLLECTION[0];
+
+/**
+ * Simulated asynchronous API call that fetches an authentic daily Hadith.
+ * Rotates based on day of the year or takes a manual index offset for live interactive browsing.
+ */
+export const fetchDailyHadithApi = async (indexOffset = 0): Promise<HadithItem> => {
+  // Simulate network latency (380ms)
+  await new Promise((resolve) => setTimeout(resolve, 380));
+
+  const now = new Date();
+  const startOfYear = new Date(now.getFullYear(), 0, 0);
+  const diff = now.getTime() - startOfYear.getTime();
+  const oneDay = 1000 * 60 * 60 * 24;
+  const dayOfYear = Math.floor(diff / oneDay);
+
+  const total = AUTHENTIC_HADITHS_COLLECTION.length;
+  const normalizedIndex = ((dayOfYear + indexOffset) % total + total) % total;
+  return AUTHENTIC_HADITHS_COLLECTION[normalizedIndex];
 };
 
 export const ESSENTIAL_DUAS: DailyDua[] = [

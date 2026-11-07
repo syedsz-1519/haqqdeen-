@@ -13,6 +13,7 @@ import { AboutView } from './views/AboutView';
 import { EstablishDeenView } from './views/EstablishDeenView';
 import { FoundersView } from './views/FoundersView';
 import { ContactView } from './views/ContactView';
+import { YouTubeView } from './views/YouTubeView';
 
 import { Course } from './types';
 import { COURSES } from './data/coursesData';
@@ -61,7 +62,7 @@ export default function App() {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '');
-      if (['home', 'about', 'learning', 'establish', 'founders', 'contact'].includes(hash)) {
+      if (['home', 'about', 'learning', 'videos', 'establish', 'founders', 'contact'].includes(hash)) {
         setCurrentTab(hash);
         setActivePlayerCourse(null);
       }
@@ -150,6 +151,10 @@ export default function App() {
                 enrolledCourseIds={enrolledCourseIds}
                 completedLessonIds={completedLessonIds}
               />
+            )}
+
+            {currentTab === 'videos' && (
+              <YouTubeView />
             )}
 
             {currentTab === 'about' && (

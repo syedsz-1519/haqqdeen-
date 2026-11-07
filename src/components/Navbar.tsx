@@ -20,6 +20,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   const navItems = [
     { id: 'home', label: 'Home' },
     { id: 'learning', label: 'Learning' },
+    { id: 'videos', label: 'Videos' },
     { id: 'establish', label: 'Establish the Deen' },
     { id: 'founders', label: 'Founders' },
     { id: 'about', label: 'About' },
@@ -38,39 +39,28 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Main Sticky Header */}
       <header className="sticky top-0 z-40 bg-[#F7F9FB]/95 backdrop-blur-md border-b border-gray-200/80 transition-all duration-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-18 flex items-center justify-between">
           
           {/* Left: Brand Identity */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2 sm:space-x-3 min-w-0">
             <button
               onClick={() => onNavigate('home')}
-              className="group flex items-center space-x-3 text-left focus:outline-none"
+              className="group flex items-center space-x-2.5 sm:space-x-3 text-left focus:outline-none min-w-0"
               aria-label="HAQQDEEN Home"
             >
               <img
                 src={HAQQDEEN_LOGO}
                 alt="HAQQDEEN"
-                className="w-11 h-11 object-contain rounded-xl p-0.5 bg-white border border-[#0A1A3F]/10 shadow-xs group-hover:scale-105 transition-transform"
+                className="w-9 h-9 sm:w-11 sm:h-11 shrink-0 object-contain rounded-xl p-0.5 bg-white border border-[#0A1A3F]/10 shadow-xs group-hover:scale-105 transition-transform"
               />
-              <div className="flex flex-col">
-                <div className="flex items-center space-x-2">
-                  <span className="font-heading font-extrabold text-[22px] tracking-tight leading-tight">
-                    <span className="text-[#0A1A3F]">HAQQ</span>
-                    <span className="text-[#0075D6]">DEEN</span>
-                  </span>
-                  <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-[#FFE088]/60 text-[#735C00] border border-[#CCA730]/40 shadow-2xs">
-                    100% Free
-                  </span>
-                </div>
-                <div className="flex items-center space-x-1.5 -mt-0.5">
-                  <span className="text-[9px] uppercase font-bold tracking-[0.18em] text-[#0A1A3F]/70">
-                    ESTABLISH THE DEEN
-                  </span>
-                  <span className="text-[10px] text-gray-300">•</span>
-                  <span className="font-arabic text-xs font-semibold text-[#005CAB] leading-none">
-                    حَقّ الدِّين
-                  </span>
-                </div>
+              <div className="flex flex-col min-w-0">
+                <span className="font-heading font-extrabold text-lg sm:text-[22px] tracking-tight leading-tight">
+                  <span className="text-[#0A1A3F]">HAQQ</span>
+                  <span className="text-[#0075D6]">DEEN</span>
+                </span>
+                <span className="text-[8px] sm:text-[9px] uppercase font-bold tracking-[0.16em] sm:tracking-[0.2em] text-[#0A1A3F]/70 truncate -mt-0.5">
+                  ESTABLISH THE DEEN
+                </span>
               </div>
             </button>
           </div>
@@ -96,7 +86,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           </nav>
 
           {/* Right: Actions & User Counter */}
-          <div className="hidden sm:flex items-center space-x-3">
+          <div className="flex items-center space-x-2 sm:space-x-3">
             {enrolledCount > 0 && (
               <button
                 onClick={() => onNavigate('learning')}
@@ -110,22 +100,31 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             <button
               onClick={() => onNavigate('learning')}
-              className="inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-semibold bg-[#0075D6] text-white shadow-sm hover:bg-[#005CAB] active:scale-[0.98] transition-all"
+              className="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-semibold bg-[#0075D6] text-white shadow-sm hover:bg-[#005CAB] active:scale-[0.98] transition-all"
             >
               <Sparkles className="w-4 h-4 mr-1.5 text-amber-200" />
               <span>Start Learning Free</span>
             </button>
-          </div>
 
-          {/* Mobile Hamburger Button */}
-          <div className="flex items-center space-x-2 lg:hidden">
+            {/* Mobile Compact Free Access Button */}
             <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-gray-700 hover:text-black hover:bg-gray-100 focus:outline-none"
-              aria-label="Toggle navigation menu"
+              onClick={() => onNavigate('learning')}
+              className="sm:hidden inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-lg text-xs font-bold bg-[#0075D6] text-white shadow-2xs hover:bg-[#005CAB] active:scale-95 transition-all"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              <Sparkles className="w-3 h-3 text-amber-200" />
+              <span>Learn</span>
             </button>
+
+            {/* Mobile Hamburger Button */}
+            <div className="lg:hidden">
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="p-1.5 sm:p-2 rounded-lg text-gray-700 hover:text-black hover:bg-gray-100 focus:outline-none"
+                aria-label="Toggle navigation menu"
+              >
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
           </div>
 
         </div>

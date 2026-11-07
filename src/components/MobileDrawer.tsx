@@ -20,6 +20,7 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({
   const navLinks = [
     { id: 'home', label: 'Home', subtitle: 'Overview & Curricular Foundations' },
     { id: 'learning', label: 'Learning Tracks', subtitle: 'Self-Paced Courses & Syllabi' },
+    { id: 'videos', label: 'YouTube Media', subtitle: '219+ Channel Masterclasses @haqqdeen' },
     { id: 'establish', label: 'Establish the Deen', subtitle: 'Hadith, Blueprints, Du’as & Habits' },
     { id: 'founders', label: 'Founders & Faculty', subtitle: 'Directorship, Discourses & Ikhlas' },
     { id: 'about', label: 'About HAQQDEEN', subtitle: 'Our Genesis, 32K Movement & Waqf' },
@@ -51,15 +52,9 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({
                   <span className="text-[#0A1A3F]">HAQQ</span>
                   <span className="text-[#0075D6]">DEEN</span>
                 </span>
-                <div className="flex items-center space-x-1.5 mt-0.5">
-                  <span className="text-[9px] uppercase font-bold tracking-[0.14em] text-[#0A1A3F]/70">
-                    ESTABLISH THE DEEN
-                  </span>
-                  <span className="text-[9px] text-gray-300">•</span>
-                  <span className="font-arabic text-xs font-semibold text-[#005CAB]">
-                    حَقّ الدِّين
-                  </span>
-                </div>
+                <span className="text-[9px] uppercase font-bold tracking-[0.16em] text-[#0A1A3F]/70 mt-0.5">
+                  ESTABLISH THE DEEN
+                </span>
               </div>
             </div>
             <button

@@ -1,6 +1,6 @@
 {
-  "summary":  "Implementation plan to enhance the brand name representation in the header, mobile drawer, and footer with modern dual-tone typography (HAQQ in Navy, DEEN in Electric Blue) and tracked uppercase tagline 'ESTABLISH THE DEEN' alongside elegant Arabic calligraphy.",
-  "updatedAt":  "2026-11-07T11:41:05.075240540Z",
+  "summary":  "Implementation plan to integrate real YouTube iframe video previews across the video catalog cards and in the responsive video player modal, featuring instant playback, verified lecture embeds, and synchronized lecture notes.",
+  "updatedAt":  "2026-11-07T13:32:37.505119065Z",
   "requestFeedback":  true,
   "userFacing":  true
 }

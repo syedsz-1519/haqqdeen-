@@ -2,10 +2,11 @@ import React from 'react';
 import { 
   Sparkles, ArrowRight, ShieldCheck, Globe, BookOpen, Mic, 
   Heart, Briefcase, Star, Clock, CheckCircle2, ChevronRight, 
-  HelpCircle, Play, Users, MessageSquare, Compass, MessageCircle, Instagram, Mail 
+  HelpCircle, Play, Users, MessageSquare, Compass, MessageCircle, Instagram, Mail, Youtube 
 } from 'lucide-react';
 import { Course } from '../types';
 import { COURSES, TESTIMONIALS } from '../data/coursesData';
+import { DailyHadithCard } from '../components/DailyHadithCard';
 
 interface HomeViewProps {
   onNavigate: (tab: string) => void;
@@ -171,6 +172,11 @@ export const HomeView: React.FC<HomeViewProps> = ({
             <div className="text-xs sm:text-sm text-gray-600 font-medium mt-1">Instagram Community</div>
           </div>
         </div>
+      </section>
+
+      {/* 2.5 DAILY HADITH CARD (SIMULATED API DRIVEN) */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <DailyHadithCard onNavigateToEstablish={() => onNavigate('establish')} />
       </section>
 
       {/* 3. FOUR CURRICULAR PILLARS */}
@@ -533,6 +539,51 @@ export const HomeView: React.FC<HomeViewProps> = ({
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* 6.5 OFFICIAL YOUTUBE CHANNEL SHOWCASE (219 VIDEOS) */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-gradient-to-r from-[#0A1A3F] via-[#0E1528] to-[#1F0910] text-white rounded-3xl p-6 sm:p-10 border border-red-900/40 shadow-xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="space-y-3 max-w-2xl text-center md:text-left">
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-2">
+              <span className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-red-600/20 text-red-400 border border-red-500/30 text-xs font-bold uppercase tracking-wider">
+                <Youtube className="w-4 h-4 text-red-500" />
+                <span>Official Channel • @haqqdeen</span>
+              </span>
+              <span className="text-xs font-bold text-amber-300 bg-amber-400/10 border border-amber-400/20 px-2.5 py-0.5 rounded-full">
+                219 Videos Catalog
+              </span>
+            </div>
+
+            <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-white tracking-tight">
+              Sacred Video Sanctuary & Weekly Discourses
+            </h2>
+
+            <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+              Explore 219 high-definition video masterclasses covering Friday Khutbahs, classical Usul, Tazkiyah routines, and youth career dilemmas on our official YouTube channel.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto shrink-0">
+            <button
+              onClick={() => onNavigate('videos')}
+              className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 px-6 py-3 rounded-xl bg-[#0075D6] hover:bg-[#005CAB] text-white text-xs font-bold shadow-md transition-all active:scale-95"
+            >
+              <Play className="w-4 h-4 fill-white" />
+              <span>Watch 219 Channel Videos</span>
+            </button>
+
+            <a
+              href="https://www.youtube.com/@haqqdeen"
+              target="_blank"
+              rel="noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center space-x-1.5 px-5 py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white text-xs font-bold shadow-md transition-all active:scale-95"
+            >
+              <Youtube className="w-4 h-4" />
+              <span>Subscribe @haqqdeen ↗</span>
+            </a>
+          </div>
         </div>
       </section>
 
