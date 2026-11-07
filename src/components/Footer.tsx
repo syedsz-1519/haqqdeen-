@@ -24,15 +24,22 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <img
                 src={HAQQDEEN_LOGO}
                 alt="HAQQDEEN"
-                className="w-10 h-10 object-contain rounded-lg p-1 bg-[#F7F9FB] border border-gray-200"
+                className="w-11 h-11 object-contain rounded-xl p-0.5 bg-[#F7F9FB] border border-gray-200 shadow-2xs"
               />
-              <div>
-                <span className="font-heading font-extrabold text-xl tracking-tight text-[#000106]">
-                  HAQQDEEN
+              <div className="flex flex-col">
+                <span className="font-heading font-extrabold text-xl tracking-tight leading-tight">
+                  <span className="text-[#0A1A3F]">HAQQ</span>
+                  <span className="text-[#0075D6]">DEEN</span>
                 </span>
-                <span className="font-arabic text-xs font-semibold text-[#005CAB] block -mt-1">
-                  حَقّ الدِّين
-                </span>
+                <div className="flex items-center space-x-1.5 mt-0.5">
+                  <span className="text-[9px] uppercase font-bold tracking-[0.16em] text-gray-500">
+                    ESTABLISH THE DEEN
+                  </span>
+                  <span className="text-[9px] text-gray-300">•</span>
+                  <span className="font-arabic text-xs font-semibold text-[#005CAB]">
+                    حَقّ الدِّين
+                  </span>
+                </div>
               </div>
             </div>
 

@@ -641,12 +641,18 @@ export const CoursePlayer: React.FC<CoursePlayerProps> = ({
                     alt="HAQQDEEN Seal"
                     className="w-16 h-16 object-contain rounded-xl p-1 bg-white border border-[#D4AF37]/40 shadow-xs"
                   />
-                  <span className="font-heading font-extrabold text-2xl text-[#0A1A3F] tracking-wider uppercase">
-                    HAQQDEEN
+                  <span className="font-heading font-extrabold text-2xl tracking-wider uppercase">
+                    <span className="text-[#0A1A3F]">HAQQ</span><span className="text-[#0075D6]">DEEN</span>
                   </span>
-                  <span className="font-arabic text-lg font-bold text-[#005CAB]">
-                    حَقّ الدِّين • أَقِيمُوا الدِّينَ
-                  </span>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-[#0A1A3F]/70">
+                      ESTABLISH THE DEEN
+                    </span>
+                    <span className="text-[10px] text-gray-300">•</span>
+                    <span className="font-arabic text-base font-bold text-[#005CAB]">
+                      حَقّ الدِّين
+                    </span>
+                  </div>
                   <span className="text-[10px] tracking-widest uppercase font-semibold text-[#735C00] bg-[#FFE088]/30 px-3 py-0.5 rounded-full border border-[#CCA730]/40">
                     Perpetual Waqf Foundation
                   </span>

@@ -44,15 +44,22 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({
               <img
                 src={HAQQDEEN_LOGO}
                 alt="HAQQDEEN"
-                className="w-9 h-9 rounded-lg object-contain bg-white border border-gray-200 p-1"
+                className="w-10 h-10 rounded-xl object-contain bg-white border border-gray-200 p-0.5 shadow-xs"
               />
-              <div>
-                <span className="font-heading font-extrabold text-lg text-[#000106] block">
-                  HAQQDEEN
+              <div className="flex flex-col">
+                <span className="font-heading font-extrabold text-lg leading-tight">
+                  <span className="text-[#0A1A3F]">HAQQ</span>
+                  <span className="text-[#0075D6]">DEEN</span>
                 </span>
-                <span className="font-arabic text-xs font-semibold text-[#005CAB]">
-                  حَقّ الدِّين
-                </span>
+                <div className="flex items-center space-x-1.5 mt-0.5">
+                  <span className="text-[9px] uppercase font-bold tracking-[0.14em] text-[#0A1A3F]/70">
+                    ESTABLISH THE DEEN
+                  </span>
+                  <span className="text-[9px] text-gray-300">•</span>
+                  <span className="font-arabic text-xs font-semibold text-[#005CAB]">
+                    حَقّ الدِّين
+                  </span>
+                </div>
               </div>
             </div>
             <button

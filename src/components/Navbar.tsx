@@ -44,26 +44,33 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div className="flex items-center space-x-3">
             <button
               onClick={() => onNavigate('home')}
-              className="group flex items-center space-x-2.5 text-left focus:outline-none"
+              className="group flex items-center space-x-3 text-left focus:outline-none"
               aria-label="HAQQDEEN Home"
             >
               <img
                 src={HAQQDEEN_LOGO}
                 alt="HAQQDEEN"
-                className="w-10 h-10 object-contain rounded-lg p-1 bg-white border border-[#0A1A3F]/10 shadow-xs group-hover:scale-105 transition-transform"
+                className="w-11 h-11 object-contain rounded-xl p-0.5 bg-white border border-[#0A1A3F]/10 shadow-xs group-hover:scale-105 transition-transform"
               />
               <div className="flex flex-col">
-                <div className="flex items-center space-x-1.5">
-                  <span className="font-heading font-extrabold text-xl tracking-tight text-[#000106]">
-                    HAQQDEEN
+                <div className="flex items-center space-x-2">
+                  <span className="font-heading font-extrabold text-[22px] tracking-tight leading-tight">
+                    <span className="text-[#0A1A3F]">HAQQ</span>
+                    <span className="text-[#0075D6]">DEEN</span>
                   </span>
-                  <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-[#FFE088]/60 text-[#735C00] border border-[#CCA730]/30">
+                  <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-[#FFE088]/60 text-[#735C00] border border-[#CCA730]/40 shadow-2xs">
                     100% Free
                   </span>
                 </div>
-                <span className="font-arabic text-xs font-semibold text-[#005CAB] -mt-1 leading-none">
-                  حَقّ الدِّين
-                </span>
+                <div className="flex items-center space-x-1.5 -mt-0.5">
+                  <span className="text-[9px] uppercase font-bold tracking-[0.18em] text-[#0A1A3F]/70">
+                    ESTABLISH THE DEEN
+                  </span>
+                  <span className="text-[10px] text-gray-300">•</span>
+                  <span className="font-arabic text-xs font-semibold text-[#005CAB] leading-none">
+                    حَقّ الدِّين
+                  </span>
+                </div>
               </div>
             </button>
           </div>

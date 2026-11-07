@@ -53,7 +53,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onNavigate }) => {
             حَقّ الدِّين — Establish the Deen
           </div>
           <h1 className="font-heading font-extrabold text-4xl sm:text-6xl text-[#000106] tracking-tight">
-            About HAQQDEEN
+            About <span className="text-[#0A1A3F]">HAQQ</span><span className="text-[#0075D6]">DEEN</span>
           </h1>
         </div>
 
