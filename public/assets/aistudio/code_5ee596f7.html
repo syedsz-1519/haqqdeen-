@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>HAQQDEEN</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "tertiary-fixed-dim": "#e9c349", "on-primary-container": "#7583ae", "on-surface": "#191c1e", "on-tertiary-container": "#4f3e00", "on-background": "#191c1e", "tertiary": "#735c00", "secondary-fixed": "#d4e3ff", "background": "#f7f9fb", "on-surface-variant": "#45464e", "surface-tint": "#4f5d86", "inverse-on-surface": "#eff1f3", "primary": "#000106", "surface-container-high": "#e6e8ea", "on-tertiary": "#ffffff", "on-secondary": "#ffffff", "tertiary-fixed": "#ffe088", "inverse-primary": "#b7c5f4", "on-secondary-fixed": "#001c3a", "primary-fixed": "#dae1ff", "on-tertiary-fixed-variant": "#574500", "on-primary-fixed-variant": "#38456c", "on-secondary-container": "#fefcff", "secondary-container": "#0075d6", "on-error-container": "#93000a", "tertiary-container": "#cca730", "surface-container-lowest": "#ffffff", "inverse-surface": "#2d3133", "primary-container": "#0a1a3f", "surface-variant": "#e0e3e5", "surface-container-highest": "#e0e3e5", "outline-variant": "#c5c6cf", "on-primary": "#ffffff", "outline": "#75767f", "surface-bright": "#f7f9fb", "error-container": "#ffdad6", "on-tertiary-fixed": "#241a00", "surface": "#f7f9fb", "secondary-fixed-dim": "#a5c8ff", "surface-dim": "#d8dadc", "on-error": "#ffffff", "surface-container": "#eceef0", "error": "#ba1a1a", "primary-fixed-dim": "#b7c5f4", "secondary": "#005cab", "on-primary-fixed": "#09193e", "on-secondary-fixed-variant": "#004786", "surface-container-low": "#f2f4f6" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1.5rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "gutter": "1.5rem", "space-xs": "0.25rem", "margin": "3rem", "space-md": "1rem", "gutter-mobile": "1rem", "margin-mobile": "1.25rem" }, fontFamily: { "body-sm": ["Inter"], "body-lg": ["Inter"], "headline-lg": ["Space Grotesk"], "label-lg": ["Inter"], "headline-md": ["Space Grotesk"], "headline-sm": ["Space Grotesk"], "headline-xl-mobile": ["Space Grotesk"], "body-xl": ["Inter"], "label-md": ["Inter"], "label-caption": ["Inter"], "headline-xl": ["Space Grotesk"], "display-hero-mobile": ["Space Grotesk"], "display-hero": ["Space Grotesk"], "body-md": ["Inter"] }, fontSize: { "body-sm": ["14px", { lineHeight: "22px", fontWeight: "400" }], "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }], "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.015em", fontWeight: "600" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.02em", fontWeight: "600" }], "headline-md": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-sm": ["20px", { lineHeight: "28px", fontWeight: "600" }], "headline-xl-mobile": ["28px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700" }], "body-xl": ["20px", { lineHeight: "32px", fontWeight: "400" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "600" }], "label-caption": ["11px", { lineHeight: "14px", letterSpacing: "0.05em", fontWeight: "500" }], "headline-xl": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700" }], "display-hero-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "700" }], "display-hero": ["56px", { lineHeight: "64px", letterSpacing: "-0.03em", fontWeight: "700" }], "body-md": ["16px", { lineHeight: "26px", fontWeight: "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Open navigation menu" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface hover:bg-surface-container-low transition-colors" id="menu-trigger" onclick="document.getElementById('mobile-drawer').classList.remove('translate-x-full');document.getElementById('drawer-backdrop').classList.remove('hidden');"><span class="material-symbols-outlined text-[24px]">menu</span></button><img alt="HAQQDEEN modern evolved vector logo mark combining illuminated open book of Haqq with radiant rays, a subtle crescent, and a stylized global Ummah latticework in deep navy, electric blue, and gold accents. Clean minimal vector geometric precision.. Brand logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VJuL4XIbDO5wAMmUiv2DJzF9AGlWCSSt24H6l1aXUcTVKyXYc4cMXNmu0t1qs29hRuQe2AB8HiXqOBj9--AYShrxS600Ntep5mjclxoUAFyGpoWipeqztCZ2TP8l3vW5wl2V0bAyMkNAtdgGGYaVNTshu0y-LjPcPDDd8hgRF2YqlftGKgZUGaPbB0kZTIONIp69-tVDduDfvLMl5HdqvR_bkOl09aKVyXt7yM9kT0Hw"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary-container leading-none tracking-tight">HAQQDEEN</span><span class="font-label-caption text-label-caption text-secondary font-medium tracking-wide">About</span></div><span class="hidden sm:inline-flex px-space-xs py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-caption text-label-caption uppercase tracking-wider font-semibold">100% Free</span></div><div class="flex items-center gap-space-sm"><span class="inline-flex sm:hidden px-space-xs py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-caption text-label-caption font-semibold">Free</span><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><div class="fixed inset-0 z-50 bg-primary/40 backdrop-blur-sm hidden transition-opacity" id="drawer-backdrop" onclick="document.getElementById('mobile-drawer').classList.add('translate-x-full');document.getElementById('drawer-backdrop').classList.add('hidden');"></div><aside class="fixed top-0 right-0 bottom-0 z-50 w-5/6 max-w-sm bg-surface-container-lowest shadow-[0_4px_24px_rgba(10,26,63,0.15)] flex flex-col justify-between pt-safe pb-safe translate-x-full transition-transform duration-300 ease-in-out" id="mobile-drawer"><div class="p-space-lg flex flex-col gap-space-lg"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><img alt="HAQQDEEN modern evolved vector logo mark" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VJuL4XIbDO5wAMmUiv2DJzF9AGlWCSSt24H6l1aXUcTVKyXYc4cMXNmu0t1qs29hRuQe2AB8HiXqOBj9--AYShrxS600Ntep5mjclxoUAFyGpoWipeqztCZ2TP8l3vW5wl2V0bAyMkNAtdgGGYaVNTshu0y-LjPcPDDd8hgRF2YqlftGKgZUGaPbB0kZTIONIp69-tVDduDfvLMl5HdqvR_bkOl09aKVyXt7yM9kT0Hw"/><span class="font-headline-sm text-headline-sm text-primary-container">HAQQDEEN</span></div><button class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container-low" onclick="document.getElementById('mobile-drawer').classList.add('translate-x-full');document.getElementById('drawer-backdrop').classList.add('hidden');"><span class="material-symbols-outlined">close</span></button></div><p class="font-label-caption text-label-caption text-tertiary uppercase tracking-wider font-semibold">Establish the Deen • 100% Free</p><div class="flex flex-col gap-space-xs"><a class="flex items-center gap-space-md min-h-[44px] px-space-md py-space-sm rounded-lg text-on-surface hover:bg-surface-container-low font-label-lg text-label-lg" data-path="home" href="#" onclick="document.getElementById('mobile-drawer').classList.add('translate-x-full');document.getElementById('drawer-backdrop').classList.add('hidden');"><span class="material-symbols-outlined text-secondary">home</span>Home</a><a class="flex items-center gap-space-md min-h-[44px] px-space-md py-space-sm rounded-lg text-on-surface hover:bg-surface-container-low font-label-lg text-label-lg" data-path="about" href="#" onclick="document.getElementById('mobile-drawer').classList.add('translate-x-full');document.getElementById('drawer-backdrop').classList.add('hidden');"><span class="material-symbols-outlined text-secondary">info</span>About</a><a class="flex items-center gap-space-md min-h-[44px] px-space-md py-space-sm rounded-lg text-on-surface hover:bg-surface-container-low font-label-lg text-label-lg" data-path="learning" href="#" onclick="document.getElementById('mobile-drawer').classList.add('translate-x-full');document.getElementById('drawer-backdrop').classList.add('hidden');"><span class="material-symbols-outlined text-secondary">menu_book</span>Learning</a><a class="flex items-center gap-space-md min-h-[44px] px-space-md py-space-sm rounded-lg text-on-surface hover:bg-surface-container-low font-label-lg text-label-lg" data-path="establish-the-deen" href="#" onclick="document.getElementById('mobile-drawer').classList.add('translate-x-full');document.getElementById('drawer-backdrop').classList.add('hidden');"><span class="material-symbols-outlined text-secondary">mosque</span>Establish the Deen</a><a class="flex items-center gap-space-md min-h-[44px] px-space-md py-space-sm rounded-lg text-on-surface hover:bg-surface-container-low font-label-lg text-label-lg" data-path="founders" href="#" onclick="document.getElementById('mobile-drawer').classList.add('translate-x-full');document.getElementById('drawer-backdrop').classList.add('hidden');"><span class="material-symbols-outlined text-secondary">groups</span>Founders</a><a class="flex items-center gap-space-md min-h-[44px] px-space-md py-space-sm rounded-lg text-on-surface hover:bg-surface-container-low font-label-lg text-label-lg" data-path="contact" href="#" onclick="document.getElementById('mobile-drawer').classList.add('translate-x-full');document.getElementById('drawer-backdrop').classList.add('hidden');"><span class="material-symbols-outlined text-secondary">alternate_email</span>Contact</a></div></div><div class="p-space-lg flex flex-col gap-space-md bg-surface-container-low/50"><a class="w-full min-h-[44px] py-space-sm px-space-md rounded-xl bg-secondary-container text-on-secondary-container font-label-lg text-label-lg flex items-center justify-center gap-space-xs shadow-[0_4px_14px_rgba(0,117,214,0.3)]" data-path="learning" href="#"><span class="material-symbols-outlined text-[18px]">bolt</span>Start Learning Free</a><div class="flex items-center justify-between text-on-surface-variant font-label-caption text-label-caption"><span>© HAQQDEEN</span><div class="flex items-center gap-space-sm"><a class="min-h-[44px] flex items-center text-secondary" href="#">Privacy</a><span>•</span><a class="min-h-[44px] flex items-center text-secondary" href="#">Terms</a></div></div></div></aside><div class="fixed bottom-24 right-space-md z-40 flex flex-col gap-space-sm items-end"><a aria-label="Instagram" class="w-11 h-11 rounded-full bg-surface-container-lowest text-on-surface flex items-center justify-center shadow-[0_4px_16px_rgba(10,26,63,0.12)] hover:bg-surface-container-low transition-all" href="https://instagram.com" rel="noopener" target="_blank"><span class="material-symbols-outlined text-[22px]">photo_camera</span></a><a aria-label="WhatsApp Support" class="relative flex items-center justify-center w-12 h-12 rounded-full bg-[#25D366] text-white shadow-[0_8px_24px_rgba(37,211,102,0.35)] active:scale-95 transition-all" href="https://wa.me" rel="noopener" target="_blank"><span class="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-25"></span><span class="material-symbols-outlined text-[26px] relative z-10">chat</span></a></div><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full">
+<!-- 1. Header & Sacred Trust Pill -->
+<section class="relative px-gutter-mobile pt-space-md pb-space-lg flex flex-col items-center text-center overflow-hidden">
+<div class="absolute inset-0 pointer-events-none opacity-40">
+<svg class="w-full h-full" fill="none" viewbox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+<circle cx="200" cy="80" fill="url(#hero-glow)" fill-opacity="0.45" r="160"></circle>
+<path d="M200 10L218 64H274L229 97L246 151L200 118L154 151L171 97L126 64H182L200 10Z" fill="none" stroke="#CCA730" stroke-opacity="0.25" stroke-width="0.75"></path>
+<path d="M200 30L212 68H252L220 91L232 129L200 106L168 129L180 91L148 68H188L200 30Z" fill="none" stroke="#0075D6" stroke-opacity="0.2" stroke-width="0.5"></path>
+<defs>
+<radialgradient cx="0" cy="0" gradienttransform="translate(200 80) rotate(90) scale(160)" gradientunits="userSpaceOnUse" id="hero-glow" r="1">
+<stop stop-color="#FFE088" stop-opacity="0.6"></stop>
+<stop offset="0.6" stop-color="#DAE1FF" stop-opacity="0.2"></stop>
+<stop offset="1" stop-color="#F7F9FB" stop-opacity="0"></stop>
+</radialgradient>
+</defs>
+</svg>
+</div>
+<div class="relative z-10 flex flex-col items-center">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-caption text-label-caption uppercase tracking-wider font-semibold shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+        100% Free • Waqf For The Ummah • Zero Paywalls
+      </span>
+<div class="mt-space-md flex flex-col items-center">
+<p class="font-headline-sm text-headline-sm text-tertiary tracking-wide mb-1 select-none" dir="rtl" lang="ar">
+          حَقّ الدِّين — Establish the Deen
+        </p>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-primary-container tracking-tight">
+          About HAQQDEEN
+        </h1>
+</div>
+<p class="mt-space-sm font-body-md text-body-md text-on-surface-variant max-w-sm">
+        Empowering the modern Ummah with uncompromised sacred Islamic knowledge and transformative life mastery.
+      </p>
+<div class="w-12 h-1 bg-tertiary-container rounded-full mt-space-md opacity-80"></div>
+</div>
+</section>
+<!-- 2. Our Journey & Movement Origin -->
+<section class="px-gutter-mobile py-space-md flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span class="font-label-caption text-label-caption text-secondary uppercase font-semibold tracking-wider">
+          Our Journey • Sacred Beginnings
+        </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary-container leading-tight">
+        From Daily Reminders to a Worldwide Movement
+      </h2>
+</div>
+<!-- Editorial Narrative & Visual Metaphor -->
+<div class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+<div class="rounded-xl overflow-hidden relative shadow-sm">
+<div class="bg-cover bg-center w-full h-44" data-alt="Intricate geometric Islamic girih pattern illuminated by warm gold light casting soft serene shadows over an open manuscript binding, modern academic aesthetic, deep navy and celestial gold tones, strictly aniconic architecture." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCwmqa88_uj5JD29lXI4QZNZkzHI22PZ01ptoJ1sKTBrrJ1kiJGe57AIBdkgZHrmRTxDHegvVK5-VJ8EJf3GNIqugkBT8lMSOLmdNx-8w9BvGNE0IKdpAO6SUS2nUE0z7mckW5nJuOSnExd7sJIdEsKauCS18AotcyFDCqU6h5UAVyZDcG-ryjWnr3NWNsDnyJuDdwB371IOmXyT2vi4-Ly-tWVIMEUGIXdTlKokvco')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/90 via-primary-container/30 to-transparent flex items-end p-space-md">
+<p class="font-label-caption text-label-caption text-on-primary font-medium tracking-wide">
+            Est. 2021 • Built with pure intention for Allah's pleasure alone.
+          </p>
+</div>
+</div>
+<p class="mt-space-xs">
+        HAQQDEEN began with a humble yet uncompromising realization: while digital content was plentiful, foundational clarity, classical depth, and high-impact oratory were missing for the youth. Starting on Instagram (<span class="font-label-md text-label-md text-secondary font-semibold">@haqqdeen</span>), we shared uncompromising daily reflections rooted firmly in the Quran, Sunnah, and the understanding of the Salaf.
+      </p>
+<p>
+        Without paid ads or algorithmic compromises, an organic brotherhood and sisterhood ignited. Over <span class="font-label-md text-label-md text-on-surface font-semibold">32,000+ dedicated seekers</span> across 18 countries gathered around authentic scholarship paired with disciplined habit formation, emotional intelligence, and bold leadership.
+      </p>
+<p>
+        We dismantled the false dichotomy between classical piety and worldly excellence. HAQQDEEN exists to build believers who walk into boardrooms, universities, and masajid with unshakeable conviction, eloquent tongues, and pure hearts.
+      </p>
+</div>
+<!-- Mobile Stat Card Bento -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary mb-space-sm">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+</div>
+<div>
+<span class="font-headline-md text-headline-md text-primary-container leading-none">32,000+</span>
+<p class="font-label-caption text-label-caption text-on-surface-variant mt-1">Dedicated Instagram Seekers</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary-container mb-space-sm">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</div>
+<div>
+<span class="font-headline-md text-headline-md text-primary-container leading-none">18+</span>
+<p class="font-label-caption text-label-caption text-on-surface-variant mt-1">Countries in Global Diaspora</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary mb-space-sm">
+<span class="material-symbols-outlined text-[20px]">all_inclusive</span>
+</div>
+<div>
+<span class="font-headline-md text-headline-md text-tertiary leading-none">100%</span>
+<p class="font-label-caption text-label-caption text-on-surface-variant mt-1">Perpetual Waqf • Zero Fees</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary mb-space-sm">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-primary-container leading-none">Salaf</span>
+<p class="font-label-caption text-label-caption text-on-surface-variant mt-1">Verified Authenticity Basis</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Clarion Call Inspiration Quote -->
+<section class="px-gutter-mobile py-space-md">
+<div class="relative bg-primary-container text-on-primary rounded-2xl p-space-lg overflow-hidden shadow-lg">
+<div class="absolute -right-8 -top-8 w-40 h-40 opacity-10 pointer-events-none">
+<svg class="w-full h-full text-secondary-fixed" fill="none" viewbox="0 0 100 100">
+<circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="2"></circle>
+<path d="M50 5 L60 40 L95 50 L60 60 L50 95 L40 60 L5 50 L40 40 Z" fill="currentColor"></path>
+</svg>
+</div>
+<div class="relative z-10 flex flex-col gap-space-sm">
+<span class="inline-flex items-center gap-1 self-start px-2 py-0.5 rounded-full bg-secondary text-on-secondary font-label-caption text-label-caption uppercase tracking-wider font-semibold">
+<span class="material-symbols-outlined text-[14px]">campaign</span>
+          The Timeless Clarion Call
+        </span>
+<p class="font-headline-sm text-headline-sm text-secondary-fixed leading-snug tracking-tight mt-space-xs font-semibold">
+          “Who will remove the evil? Who will unite the scattered? Who will guide the lost?”
+        </p>
+<div class="w-8 h-0.5 bg-tertiary-fixed rounded-full my-space-xs opacity-75"></div>
+<p class="font-body-sm text-body-sm text-on-primary-container leading-relaxed">
+          The concept of <strong class="text-on-secondary-container">Tajdeed</strong> (revival) demands continuous action. HAQQDEEN stands as a sanctuary of spiritual mobilization—arming believers with pristine theology, courageous speech, and relentless brotherhood to actively build solutions for our Ummah.
+        </p>
+</div>
+</div>
+</section>
+<!-- 4. Purpose & Horizon (Vision & Mission) -->
+<section class="px-gutter-mobile py-space-md flex flex-col gap-space-md">
+<div class="text-center flex flex-col items-center">
+<span class="font-label-caption text-label-caption text-tertiary uppercase font-semibold tracking-wider">
+        Purpose &amp; Horizon
+      </span>
+<h2 class="font-headline-md text-headline-md text-primary-container">
+        Guiding Principles
+      </h2>
+</div>
+<!-- Vision Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined text-[24px]">visibility</span>
+</div>
+<div>
+<span class="font-label-caption text-label-caption text-tertiary uppercase tracking-wider font-semibold">The Horizon</span>
+<h3 class="font-headline-sm text-headline-sm text-primary-container">Our Vision</h3>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caption text-label-caption font-semibold">Global</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        A resolute, interconnected global Ummah rooted deeply in sacred Tawheed, spiritually unassailable, intellectually self-reliant, and commanding universal moral respect through exemplary leadership.
+      </p>
+</div>
+<!-- Mission Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">explore</span>
+</div>
+<div>
+<span class="font-label-caption text-label-caption text-secondary uppercase tracking-wider font-semibold">The Mandate</span>
+<h3 class="font-headline-sm text-headline-sm text-primary-container">Our Mission</h3>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-caption text-label-caption font-semibold">Action</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        To democratize sacred classical Islamic scholarship while pairing it with modern oratory, psychological resilience, and ethical workplace mastery—offered unconditionally 100% free of charge to any truth seeker worldwide.
+      </p>
+</div>
+</section>
+<!-- 5. Pillars of Integrity (Values) -->
+<section class="px-gutter-mobile py-space-md flex flex-col gap-space-md bg-surface-container-low">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-caption text-label-caption text-secondary uppercase font-semibold tracking-wider">
+        Foundational Bedrock
+      </span>
+<h2 class="font-headline-md text-headline-md text-primary-container">
+        Pillars of Integrity
+      </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        The non-negotiable spiritual standards governing every lesson, reminder, and halaqah produced by our platform.
+      </p>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Pillar 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caption text-label-caption text-tertiary font-bold">01</span>
+<span class="font-headline-sm text-headline-sm text-tertiary" dir="rtl" lang="ar">حَقّ</span>
+</div>
+<div class="mt-space-sm">
+<h4 class="font-label-lg text-label-lg text-primary-container">Haqq</h4>
+<p class="font-label-caption text-label-caption text-secondary font-semibold">Truth &amp; Conviction</p>
+<p class="mt-1 font-body-sm text-[12px] leading-tight text-on-surface-variant">
+            Uncompromising adherence to divine revelation without watering down tenets for modern approval.
+          </p>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caption text-label-caption text-secondary font-bold">02</span>
+<span class="font-headline-sm text-headline-sm text-secondary" dir="rtl" lang="ar">عِلْم</span>
+</div>
+<div class="mt-space-sm">
+<h4 class="font-label-lg text-label-lg text-primary-container">‘Ilm</h4>
+<p class="font-label-caption text-label-caption text-secondary font-semibold">Sacred Knowledge</p>
+<p class="mt-1 font-body-sm text-[12px] leading-tight text-on-surface-variant">
+            Rigorous scholarship rooted in the primary texts with authentic chains of classical deduction.
+          </p>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caption text-label-caption text-secondary font-bold">03</span>
+<span class="font-headline-sm text-headline-sm text-secondary" dir="rtl" lang="ar">وَحْدَة</span>
+</div>
+<div class="mt-space-sm">
+<h4 class="font-label-lg text-label-lg text-primary-container">Wahdah</h4>
+<p class="font-label-caption text-label-caption text-secondary font-semibold">Ummah Unity</p>
+<p class="mt-1 font-body-sm text-[12px] leading-tight text-on-surface-variant">
+            Transcending tribalism and sectarian noise to bond hearts on the singular rope of Allah.
+          </p>
+</div>
+</div>
+<!-- Pillar 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caption text-label-caption text-tertiary font-bold">04</span>
+<span class="font-headline-sm text-headline-sm text-tertiary" dir="rtl" lang="ar">تَرْبِيَة</span>
+</div>
+<div class="mt-space-sm">
+<h4 class="font-label-lg text-label-lg text-primary-container">Tarbiyah</h4>
+<p class="font-label-caption text-label-caption text-secondary font-semibold">Spiritual Growth</p>
+<p class="mt-1 font-body-sm text-[12px] leading-tight text-on-surface-variant">
+            Continuous inward purification transforming knowledge into outward character and ethical practice.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. The Five Curricular Dimensions -->
+<section class="px-gutter-mobile py-space-md flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[18px]">auto_stories</span>
+<span class="font-label-caption text-label-caption text-tertiary uppercase font-semibold tracking-wider">
+          Curricular Scope
+        </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary-container">
+        The Five Dimensions of Mastery
+      </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        A holistic, integrated educational architecture pairing sacred guidance with worldly competence.
+      </p>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Dim 1 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed text-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">menu_book</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-caption text-label-caption text-secondary font-semibold">Track 01</span>
+<span class="font-label-caption text-label-caption text-tertiary font-medium">Sacred Core</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-primary-container">Islamic Studies &amp; Usul</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Pristine Aqeedah, essential practical Fiqh for everyday life, and profound Seerah reflections that shape identity.
+          </p>
+</div>
+</div>
+<!-- Dim 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">record_voice_over</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-caption text-label-caption text-secondary font-semibold">Track 02</span>
+<span class="font-label-caption text-label-caption text-secondary font-medium">Expression</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-primary-container">Public Speaking &amp; Rhetoric</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Khutbah composition, articulation under pressure, clear Da‘wah methodologies, and charismatic stage presence.
+          </p>
+</div>
+</div>
+<!-- Dim 3 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">psychology</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-caption text-label-caption text-secondary font-semibold">Track 03</span>
+<span class="font-label-caption text-label-caption text-tertiary font-medium">Internal</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-primary-container">Motivation &amp; Tazkiyah Mindset</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Conquering spiritual burnout, rewiring atomic habits, heart purification, and mental fortitude against modern nihilism.
+          </p>
+</div>
+</div>
+<!-- Dim 4 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high text-on-surface flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">handshake</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-caption text-label-caption text-secondary font-semibold">Track 04</span>
+<span class="font-label-caption text-label-caption text-secondary font-medium">Interpersonal</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-primary-container">Soft Skills Mastery</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Prophetic emotional intelligence, deep active listening, amicable conflict de-escalation, and high-trust relationship building.
+          </p>
+</div>
+</div>
+<!-- Dim 5 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">workspace_premium</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-label-caption text-label-caption text-secondary font-semibold">Track 05</span>
+<span class="font-label-caption text-label-caption text-secondary font-medium">Vocational</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-primary-container">Professional Skills &amp; Ihsan</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Barakah-focused time management, ethical corporate leadership, strategic execution, and undeniable excellence at work.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Break / Atmosphere Banner -->
+<section class="px-gutter-mobile py-space-sm">
+<div class="relative rounded-2xl overflow-hidden shadow-sm">
+<div class="bg-cover bg-center w-full h-40" data-alt="High contrast atmospheric minimalist architectural interior of a contemporary Islamic university study court, serene soft sunlight flowing across pure white archways, geometric symmetry, serene and intellectual environment." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD28wLWJi-T9BJIGF2YkmSuGsa7CDdqnZLvgoe18J1x2HMWlGUzIIPGE1ZV7Fko4uAcoXxFW2k4QAKSrJCKa2NreHVfDJbUrzZoZTq9ClYrSauwHfgplQAaGriS7RKwRSmNWCZ7r0rP6s_di32YHzZkl2wY5UoyrTfrjiNT9w8kpaUfM7xB_9x58JFCoHfCbbOEQPGWixWt8ItvwxvcfOFThPgmWFpMlp7fduwKKU0n')"></div>
+<div class="absolute inset-0 bg-primary-container/80 flex flex-col justify-center items-center text-center p-space-md">
+<span class="material-symbols-outlined text-tertiary-fixed text-[28px] mb-1">balance</span>
+<h4 class="font-headline-sm text-headline-sm text-on-primary">Rooted in Heritage. Ready for the Future.</h4>
+<p class="font-label-caption text-label-caption text-secondary-fixed mt-1">Free from paywalls, advertisements, and commercial interests.</p>
+</div>
+</div>
+</section>
+<!-- 7. Mobile Living Timeline -->
+<section class="px-gutter-mobile py-space-md flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-caption text-label-caption text-secondary uppercase font-semibold tracking-wider">
+        Our Evolution
+      </span>
+<h2 class="font-headline-md text-headline-md text-primary-container">
+        The Living Timeline
+      </h2>
+</div>
+<!-- Connected Nodes Vertical Line -->
+<div class="relative pl-6 flex flex-col gap-space-lg">
+<!-- Vertical guide line -->
+<div class="absolute left-2.5 top-3 bottom-3 w-0.5 bg-surface-container-highest"></div>
+<!-- Node 2021 -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-5 h-5 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-secondary"></div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md px-2 py-0.5 rounded-full bg-secondary-fixed text-secondary font-bold">2021</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant font-medium">The Seed</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-primary-container mt-1">Inception &amp; First Halaqahs</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          50 initial seekers met weekly in virtual circles to bridge foundational theology with youth communication dilemmas.
+        </p>
+</div>
+<!-- Node 2022 -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-5 h-5 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-secondary"></div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md px-2 py-0.5 rounded-full bg-secondary-fixed text-secondary font-bold">2022</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant font-medium">Digital Reach</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-primary-container mt-1">Awakening on Instagram (@haqqdeen)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          High-aesthetic, unapologetic digital reminders launched, rapidly resonating across English-speaking youth worldwide.
+        </p>
+</div>
+<!-- Node 2023 -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-5 h-5 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-tertiary"></div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-bold">2023</span>
+<span class="font-label-caption text-label-caption text-tertiary font-semibold">Scale</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-primary-container mt-1">32,000+ Community &amp; Curriculum</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          The Five Dimensions were codified into structured syllabi, reaching across 18 countries with global live masterclasses.
+        </p>
+</div>
+<!-- Node 2024 -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-5 h-5 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-secondary"></div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-bold">2024</span>
+<span class="font-label-caption text-label-caption text-secondary font-medium">Sanctuary</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-primary-container mt-1">Perpetual Waqf Declaration</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          HAQQDEEN legally structured as a permanent trust: zero commercial ads, zero paid subscriptions, guaranteed 100% free forever.
+        </p>
+</div>
+<!-- Node 2025 & Beyond -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-5 h-5 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center ring-2 ring-tertiary">
+<div class="w-2 h-2 rounded-full bg-tertiary animate-ping"></div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-bold">2025 • Next</span>
+<span class="font-label-caption text-label-caption text-tertiary font-semibold">Global Ummah Expansion</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-primary-container mt-1">The Digital Institute &amp; Brotherhood</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Rolling out accredited modules, mobile learning tracks, and local chapters to mobilize leaders in every major capital.
+        </p>
+</div>
+</div>
+</section>
+<!-- 8. High-Converting Mobile Call-to-Action -->
+<section class="px-gutter-mobile py-space-md mb-space-sm">
+<div class="relative bg-primary-container rounded-3xl p-space-lg text-on-primary overflow-hidden shadow-xl text-center flex flex-col items-center">
+<!-- Glow & Ornament Background -->
+<div class="absolute inset-0 pointer-events-none opacity-20">
+<svg class="w-full h-full" fill="none" viewbox="0 0 300 300">
+<circle cx="150" cy="150" r="130" stroke="#CCA730" stroke-dasharray="4 4" stroke-width="1"></circle>
+<circle cx="150" cy="150" r="90" stroke="#0075D6" stroke-width="1.5"></circle>
+<path d="M150 20L155 70H185L160 90L170 140L150 110L130 140L140 90L115 70H145L150 20Z" fill="#FFE088" fill-opacity="0.4"></path>
+</svg>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-space-sm w-full">
+<span class="px-space-sm py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-caption text-label-caption uppercase tracking-wider font-semibold">
+          Join 32,000+ Seekers Today
+        </span>
+<h2 class="font-headline-lg text-headline-lg text-on-secondary-container tracking-tight leading-tight mt-1">
+          Be Part of the Mission to Establish the Deen.
+        </h2>
+<p class="font-body-sm text-body-sm text-on-primary-container max-w-xs mt-1">
+          No credit card. No paywall. Pure authentic knowledge delivered directly to elevate your faith, voice, and mind.
+        </p>
+<!-- CTA Buttons -->
+<div class="flex flex-col w-full gap-space-sm mt-space-md">
+<a class="w-full min-h-[48px] py-space-sm px-space-md rounded-xl bg-secondary-container text-on-secondary-container font-label-lg text-label-lg flex items-center justify-center gap-space-xs shadow-md active:scale-[0.98] transition-transform" data-path="learning" href="#">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+            Start Learning Free
+          </a>
+<a class="w-full min-h-[48px] py-space-sm px-space-md rounded-xl bg-surface-container-lowest/10 hover:bg-surface-container-lowest/20 text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-space-xs transition-colors backdrop-blur-sm" href="https://instagram.com/haqqdeen" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[20px]">photo_camera</span>
+            Connect on Instagram (@haqqdeen)
+          </a>
+</div>
+<div class="flex items-center gap-1.5 mt-space-xs text-on-primary-container font-label-caption text-label-caption opacity-80">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">lock_open</span>
+<span>Open to all brothers and sisters worldwide</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Accordion Script for Mobile Micro-Delight -->
+<script>
+    document.querySelectorAll('[data-accordion-trigger]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector('.material-symbols-outlined');
+        if (content.classList.contains('hidden')) {
+          content.classList.remove('hidden');
+          if (icon) icon.textContent = 'expand_less';
+        } else {
+          content.classList.add('hidden');
+          if (icon) icon.textContent = 'expand_more';
+        }
+      });
+    });
+  </script>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-secondary"><div class="flex items-center justify-around h-16 px-space-sm"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-caption text-label-caption">Home</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface" data-path="learning" href="#"><span class="material-symbols-outlined text-[22px]">menu_book</span><span class="font-label-caption text-label-caption">Learning</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface" data-path="establish-the-deen" href="#"><span class="material-symbols-outlined text-[22px]">mosque</span><span class="font-label-caption text-label-caption">Deen</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-secondary" data-path="about" href="#"><span class="material-symbols-outlined text-[22px]">info</span><span class="font-label-caption text-label-caption">About</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface" data-path="contact" href="#"><span class="material-symbols-outlined text-[22px]">alternate_email</span><span class="font-label-caption text-label-caption">Contact</span></a></div></nav></body></html>

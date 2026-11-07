@@ -1,0 +1,6 @@
+{
+  "name": "HAQQDEEN - Authentic Islamic Learning",
+  "description": "100% free authentic Islamic learning and personal mastery platform empowering the global Ummah.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
